@@ -1,62 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1CF49A10-B864-4DFF-88F3-4F040CD31615}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>OxyPlot.EtoForms</RootNamespace>
-    <AssemblyName>OxyPlot.EtoForms</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <LangVersion>7</LangVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <LangVersion>7</LangVersion>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Compile Include="SvgExporter.cs" />
-    <Compile Include="PngExporter.cs" />
-    <Compile Include="PlotView.cs" />
-    <Compile Include="PlotModelExtensions.cs" />
-    <Compile Include="GraphicsRenderContext.cs" />
-    <Compile Include="GraphicsPenDescription.cs" />
-    <Compile Include="ExporterExtensions.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util.cs" />
-    <Compile Include="EtoFormsConverterExtensions.cs" />
+    <PackageReference Include="Eto.Forms" Version="2.5.11" />
+    <PackageReference Include="OxyPlot.Core" Version="2.0.0" />
   </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.ComponentModel.Annotations">
-      <HintPath>packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
-    </Reference>
-    <Reference Include="mscorlib" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="Eto">
-      <HintPath>packages\Eto.Forms.2.5.11\lib\netstandard2.0\Eto.dll</HintPath>
-    </Reference>
-    <Reference Include="OxyPlot">
-      <HintPath>packages\OxyPlot.Core.2.0.0\lib\net45\OxyPlot.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="packages\Eto.Forms.2.5.11\build\Eto.Forms.targets" Condition="Exists('packages\Eto.Forms.2.5.11\build\Eto.Forms.targets')" />
+
 </Project>
