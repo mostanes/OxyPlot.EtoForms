@@ -17,9 +17,12 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-    - name: Restore dependencies
-      run: dotnet restore
+
     - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet build -c Release
+    
+    - name: Upload nuget artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: nuget
+        path: bin/Release/*.nupkg
