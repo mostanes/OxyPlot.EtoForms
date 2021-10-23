@@ -2,11 +2,33 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageLicenseFile></PackageLicenseFile>
+    <Description>OxyPlot plotting library for Eto.Forms</Description>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://oxyplot.github.io/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mostanes/OxyPlot.EtoForms</RepositoryUrl>
+    <PackageTags>OxyPlot Eto.Forms plotting plot charting chart</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Copyright (c) 2014 OxyPlot contributors, 2021 mostanes</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Eto.Forms" Version="2.5.11" />
+    <PackageReference Include="GitVersion.MsBuild" Version="5.7.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="OxyPlot.Core" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
