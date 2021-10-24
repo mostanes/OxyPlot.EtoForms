@@ -13,13 +13,21 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-    - name: Restore dependencies
-      run: dotnet restore
+
     - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet build -c Release
+    
+    - name: Upload nuget artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: nuget
+        path: OxyPlot.EtoForms/bin/Release/*.nupkg
+
+    - name: Push to nuget.org
+      run: dotnet nuget push 'OxyPlot.EtoForms/bin/Release/*.nupkg' --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}}

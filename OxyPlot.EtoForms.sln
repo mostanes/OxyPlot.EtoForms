@@ -4,7 +4,12 @@ VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OxyPlot.EtoForms", "OxyPlot.EtoForms\OxyPlot.EtoForms.csproj", "{1CF49A10-B864-4DFF-88F3-4F040CD31615}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{4D39EBC6-09C9-4B15-83FD-43D9D42A94CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp", "TestApp\TestApp.csproj", "{4D39EBC6-09C9-4B15-83FD-43D9D42A94CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7EBEF044-C12D-4B14-BD5A-BD0C8434D750}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

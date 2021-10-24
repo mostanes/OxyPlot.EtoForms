@@ -8,11 +8,14 @@
     <PackageIconUrl />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://oxyplot.github.io/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/mostanes/OxyPlot.EtoForms</RepositoryUrl>
+    <RepositoryUrl>https://github.com/rafntor/OxyPlot.EtoForms</RepositoryUrl>
     <PackageTags>OxyPlot Eto.Forms plotting plot charting chart</PackageTags>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Copyright>Copyright (c) 2014 OxyPlot contributors, 2021 mostanes</Copyright>
+    <Copyright>Copyright (c) 2014 OxyPlot contributors, Copyright (c) 2021 mostanes</Copyright>
+    <Authors>OxyPlot contributors</Authors>
+    <Company></Company>
+    <Product />
   </PropertyGroup>
 
   <ItemGroup>
