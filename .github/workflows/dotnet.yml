@@ -15,8 +15,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+    - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
 
@@ -30,4 +29,5 @@ jobs:
         path: OxyPlot.EtoForms/bin/Release/*.nupkg
 
     - name: Push to nuget.org
+      if: (github.ref == 'refs/heads/master')
       run: dotnet nuget push 'OxyPlot.EtoForms/bin/Release/*.nupkg' --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}}
