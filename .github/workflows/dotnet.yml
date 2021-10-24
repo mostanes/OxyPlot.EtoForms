@@ -28,3 +28,6 @@ jobs:
       with:
         name: nuget
         path: OxyPlot.EtoForms/bin/Release/*.nupkg
+
+    - name: Push to nuget.org
+      run: dotnet nuget push 'OxyPlot.EtoForms/bin/Release/*.nupkg' --skip-duplicate -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}}
